@@ -82,3 +82,8 @@ Collaborate with healthcare providers to offer a complete solution for medical r
 - MetaMask
 - React
 - Tailwind CSS
+
+# Snapshot
+
+## Landing Page
+![Homepage](https://github.com/iwhe/MediBlock---Decentralized-Health-Record-System/blob/main/safe/public/homepage.png)
