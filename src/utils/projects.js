@@ -1,8 +1,8 @@
-// import ReactJS from "../assets/skills/react.png";
-// import NodeJS from "../assets/skills/node-js.png";
-// import DemoClassroom from "../assets/projects/demoVideos/Classroom Assignment Demo .mp4";
-import { image } from "framer-motion/client";
 import {
+  HTML,
+  CSS,
+  JavaScript,
+  Python,
   ReactJS,
   NodeJS,
   Tailwind,
@@ -23,9 +23,6 @@ import {
   MediblockDescription,
 } from "./export.js";
 
-/**Attendance tracking**
-- **Assignment submissions**
-- **Real-time notifications**/
 const Projects = () => {
   const projects = [
     {
@@ -160,12 +157,20 @@ const Projects = () => {
       ],
       technologies: [
         {
-          image: ReactJS,
-          name: "ReactJS",
+          image: HTML,
+          name: "HTML",
         },
         {
-          image: NodeJS,
-          name: "Node.js",
+          image: CSS,
+          name: "CSS",
+        },
+        {
+          image: JavaScript,
+          name: "JavaScript",
+        },
+        {
+          image: Python,
+          name: "Python",
         },
       ],
     },

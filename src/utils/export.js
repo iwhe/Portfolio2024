@@ -7,6 +7,10 @@ import Ganache from "../assets/skills/ganache.png";
 import Metamask from "../assets/skills/metamask.png";
 import Solidity from "../assets/skills/solidity.png";
 import MySQL from "../assets/skills/mysql.png";
+import HTML from "../assets/skills/html.png";
+import CSS from "../assets/skills/css.png";
+import JavaScript from "../assets/skills/js.png";
+import Python from "../assets/skills/python.png";
 
 import DemoClassroom from "../assets/projects/demoVideos//ClassroomAssignmentDemo.mp4";
 import Cover1 from "../assets/projects/coverImage/Reading and Writing.png";
@@ -21,6 +25,10 @@ import GappDescription from "../assets/project-descriptions/gapp.md?raw";
 import MediblockDescription from "../assets/project-descriptions/mediblock.md?raw";
 
 export {
+  HTML,
+  CSS,
+  JavaScript,
+  Python,
   ReactJS,
   NodeJS,
   MongoDB,
