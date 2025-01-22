@@ -12,23 +12,25 @@ import Postman from "../assets/skills/postman.png";
 import Vercel from "../assets/skills/vercel.png";
 import Mysql from "../assets/skills/mysql.png";
 import GitHub from "../assets/skills/github.png";
+import Vue from "../assets/skills/vue_js_icon_188136.webp";
 
 const Skills = () => {
   const skills = [
-    { id: 1, name: "HTML", level: "Beginner", image: Html },
-    { id: 2, name: "CSS", level: "Beginner", image: Css },
-    { id: 3, name: "JavaScript", level: "Beginner", image: Js },
-    { id: 4, name: "Node JS", level: "Beginner", image: Node },
-    { id: 5, name: "React JS", level: "Beginner", image: ReactJS },
-    { id: 6, name: "MongoDB", level: "Beginner", image: Mongo },
-    { id: 7, name: "MySQL", level: "Beginner", image: Mysql },
-    { id: 8, name: "Python", level: "Beginner", image: Python },
-    { id: 9, name: "Java", level: "Beginner", image: Java },
-    { id: 10, name: "GitHub", level: "Beginner", image: GitHub },
-    { id: 11, name: "Postman", level: "Beginner", image: Postman },
-    { id: 12, name: "Vercel", level: "Beginner", image: Vercel },
-    { id: 13, name: "Figma", level: "Beginner", image: Figma },
-    { id: 14, name: "Canva", level: "Beginner", image: Canva },
+    { id: 1, name: "HTML", level: 4, image: Html },
+    { id: 2, name: "CSS", level: 4, image: Css },
+    { id: 3, name: "JavaScript", level: 4, image: Js },
+    { id: 4, name: "Node.js", level: 3, image: Node },
+    { id: 5, name: "ReactJS", level: 3, image: ReactJS },
+    { id: 6, name: "MongoDB", level: 3, image: Mongo },
+    { id: 7, name: "MySQL", level: 3, image: Mysql },
+    { id: 8, name: "Python", level: 2, image: Python },
+    { id: 9, name: "Java", level: 2, image: Java },
+    { id: 10, name: "GitHub", level: 4, image: GitHub },
+    { id: 11, name: "Postman", level: 3, image: Postman },
+    { id: 12, name: "Vercel", level: 3, image: Vercel },
+    { id: 13, name: "Figma", level: 2, image: Figma },
+    { id: 14, name: "Canva", level: 4, image: Canva },
+    { id: 15, name: "Vue", level: 1, image: Vue },
   ];
   return skills;
 };

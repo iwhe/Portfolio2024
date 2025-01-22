@@ -25,7 +25,28 @@ export default {
       textColor: {
         white: "#FFF1DE",
       },
+
+      perspective: {
+        1000: "1000px",
+      },
+      rotate: {
+        "y-180": "rotateY(180deg)",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".perspective-1000": {
+          perspective: "1000px",
+        },
+        ".preserve-3d": {
+          transformStyle: "preserve-3d",
+        },
+        ".backface-hidden": {
+          backfaceVisibility: "hidden",
+        },
+      });
+    },
+  ],
 };

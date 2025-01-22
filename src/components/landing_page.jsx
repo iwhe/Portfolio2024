@@ -3,6 +3,7 @@ import { BiSolidRightArrow } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
 import OtherSide from "./otherSide.jsx";
 import defaultProfile from "../assets/default-profile.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Landing_page = () => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -40,23 +41,25 @@ const Landing_page = () => {
   };
 
   return (
-    <div className="h-screen w-screen bg-primary-bg flex items-center justify-center overflow-hidden">
+    <div className="h-screen w-screen bg-primary-bg flex items-center justify-center ">
       {!isFlipped ? (
         <div className="relative m-4 w-96 h-[600px] md:w-3/5 md:h-4/5 rounded-2xl border bg-[#02011172] p-5 flex flex-col items-center justify-between">
           {/* Profile Image Placeholder */}
 
           <div className="flex  box-border flex-col md:flex-row md:gap-8 h-full ">
-            <div className="flex md:flex-col flex-row gap-2 relative justify-left md:items-start space-y-2 w-full">
+            <div className="flex md:flex-col flex-row gap-2 relative justify-left md:items-start space-y-2 md:w-full">
               <div className="flex flex-row md:flex-col justify-center items-center gap-4">
-                <div className="overflow-hidden bg-gray-200 border border-black rounded-2xl min-h-32 min-w-32 lg:h-[240px] lg:w-[240px] flex items-center justify-center">
+                <div className="overflow-hidden bg-gray-200 border border-black rounded-2xl h-[140px] w-[140px] md:h-fit md:w-fit flex items-center justify-center">
                   <img
                     src={defaultProfile}
                     className="object-cover box-border  relative w-full"
                   />
                 </div>
                 <div className="text-center">
-                  <h1 className="text-white font-bold font-figtree relative text-[45px] leading-snug text-center mx-4">
-                    Bhupesh Paneru
+                  <h1 className="text-white font-semibold font-figtree relative text-[25px] lg:text-[40px] leading-snug text-center mx-4 w-full">
+                    Hi!
+                    <br></br> I'm
+                    <span className="font-bold text-amber-400"> Bhupesh</span>
                   </h1>
                 </div>
               </div>
@@ -89,7 +92,15 @@ const Landing_page = () => {
 
               {/* Short Summary */}
               <div className="text-white text-sm  mt-2 text-justify">
-I am driven by a strong motivation to excel in the field of computer engineering. My goal is to leverage my broad skill set as a foundation for continuous improvement and specialization. I believe that with enough dedication and hard work, I can achieve significant milestones and make meaningful contributions to the industry. Collaboration and teamwork are essential to my approach, as I believe they lead to the best innovative solutions. In my free time, I love hiking, photography, and exploring the great outdoors.
+                I am driven by a strong motivation to excel in the field of
+                computer engineering. My goal is to leverage my broad skill set
+                as a foundation for continuous improvement and specialization. I
+                believe that with enough dedication and hard work, I can achieve
+                significant milestones and make meaningful contributions to the
+                industry. Collaboration and teamwork are essential to my
+                approach, as I believe they lead to the best innovative
+                solutions. In my free time, I love hiking, photography, and
+                exploring the great outdoors.
               </div>
             </div>
           </div>
@@ -98,22 +109,27 @@ I am driven by a strong motivation to excel in the field of computer engineering
             <div className="socials flex items-center md:items-end">
               <ul className="list-none text-[10px]  flex flex-row gap-2 items-center md:items-end text-gray-300">
                 <li className="hover:underline cursor-pointer hover:text-[#f6962f]">
-                  Instagram
+                  <a href="https://www.instagram.com/bhupeshpaneru">
+                    Instagram
+                  </a>
                 </li>
                 <li className="hover:underline cursor-pointer hover:text-[#383156]">
-                  X
+                  <a href="https://www.x.com/codewbhupesh">X</a>
                 </li>
                 <li className="hover:underline cursor-pointer hover:text-[#0a63bc]">
-                  LinkedIn
+                  <a href="https://www.linkedin.com/in/bhupeshpaneru">
+                    LinkedIn
+                  </a>
                 </li>
                 <li className="hover:underline cursor-pointer hover:text-[#383156]">
-                  GitHub
+                  <a href="https://www.github.com/iwhe">GitHub</a>
                 </li>
               </ul>
             </div>
 
             <div
               onClick={handleFlip}
+              // onClick={() => navigate("/#otherside")}
               className="lowercase underline decoration-sky-500 text-[10px]  flex flex-row items-center justify-end text-right mt-2 gap-4 border-t border-gray-100 w-full pt-4"
             >
               <p className="text-gray-500 cursor-pointer hover:text-sky-100 italic">
@@ -126,7 +142,7 @@ I am driven by a strong motivation to excel in the field of computer engineering
           </div>
         </div>
       ) : (
-        <OtherSide handleFlip={handleFlip} />
+        <OtherSide id="otherside" handleFlip={handleFlip} />
       )}
     </div>
   );
