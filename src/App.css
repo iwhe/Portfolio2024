@@ -1,0 +1,126 @@
+html, body{
+  background-color: #000000;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+li, p{
+  font-size: 0.7rem;
+}
+
+/* .skill-popup {
+position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+} */
+ .skill-popup::after {
+  content: '';
+  position: absolute;
+  top: -9px; /* Position arrow below the box */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color:  transparent transparent #ffffffaf  transparent; /* Triangle pointing down */
+}
+
+.profile-photo:hover {
+  transition: transform 0.3s ease;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading h1{
+  /* font-family: 'Anton', sans-serif; */
+  /* font-size: 1.5rem; */
+  /* letter-spacing: 1px; */
+  /* text-transform: uppercase; */
+  width: fit-content;
+  text-align: center;
+  background:  #ecc50358;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* .rotating-border {
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: 
+    conic-gradient(from 0deg, transparent, white 10%, transparent 20%) border-box;
+  animation: rotateBorder 4s linear infinite;
+} */
+/* 
+@keyframes rotateBorder {
+  0% {
+    background: 
+      linear-gradient(black, black) padding-box,
+      conic-gradient(from 0deg, transparent, white 10%, transparent 20%) border-box;
+  }
+  100% {
+    background: 
+      linear-gradient(black, black) padding-box,
+      conic-gradient(from 360deg, transparent, white 10%, transparent 20%) border-box;
+  }
+} */
+
+.rotating-border{
+ position: relative;
+  /* width: 200px;
+  height: 200px; */
+  /* border-radius: 12px; */
+  /* background: black; content background */
+  ;
+  /* color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* overflow: hidden; */
+}
+
+/* Glowing border layer */
+.rotating-border:hover::before {
+   content: "";
+  position: absolute;
+  inset: 0; /* cover the whole element */
+  border-radius: 12px;
+  padding: 0.5px; /* border thickness */
+  background: linear-gradient(90deg, #2D0808 0%, #ecc603 30%, #2D0808 60%, #ecc603 90%, #2D0808 100%  );
+  background-size: 300% ;
+  animation: spin 4s linear infinite;
+
+  /* mask: only show the border area, hide inner content */
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; 
+          mask-composite: exclude;
+  z-index: 1;
+  pointer-events: none;
+  } 
+
+@keyframes spin {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
